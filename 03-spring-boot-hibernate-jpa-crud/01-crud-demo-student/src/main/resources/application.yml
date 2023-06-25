@@ -1,0 +1,28 @@
+spring:
+  # database configuration
+  datasource:
+    url: jdbc:mysql://localhost:3306/student_tracker
+    username: springstudent
+    password: springstudent
+  # spring banner
+  main:
+    banner-mode: off
+  # Configure JPA/Hibernate to auto create the tables
+  jpa:
+    hibernate:
+      # the "create" config will drop the tables and creates new ones based on the entities
+      # ddl-auto: create
+      # the "update" config will keep existing data in the table
+      ddl-auto: update
+
+logging:
+  level:
+    # reduce logging level. set logging level to warn
+    root: warn
+    # add logging config sto display SQL statements
+    org:
+      hibernate:
+        SQL: debug
+        orm:
+          jdbc:
+            bind: trace

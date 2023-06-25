@@ -1,0 +1,26 @@
+spring:
+  # JDBC properties
+  datasource:
+    url: jdbc:mysql://localhost:3306/employee_directory
+    username: springstudent
+    password: springstudent
+  # spring banner
+  main:
+    banner-mode: console # off
+  # Spring Data REST properties
+  data:
+    rest:
+      base-path: /magic-api
+      default-page-size: 3
+
+logging:
+  level:
+    # reduce logging level. set logging level to warn
+    root: warn
+    # add logging config sto display SQL statements
+    org:
+      hibernate:
+        SQL: debug
+        orm:
+          jdbc:
+            bind: trace
