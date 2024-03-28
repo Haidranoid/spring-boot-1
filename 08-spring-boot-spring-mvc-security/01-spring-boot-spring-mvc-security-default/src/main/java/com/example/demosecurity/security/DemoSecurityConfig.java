@@ -53,6 +53,12 @@ public class DemoSecurityConfig {
 
     /*
     @Bean
+    public UserDetailsManager userDetailsManager(DataSource dataSource){
+        new JdbcUserDetailsManager(dataSource);
+    }*/
+
+    /*
+    @Bean
     public InMemoryUserDetailsManager userDetailsManager() {
         UserDetails john = User.builder()
                 .username("john")
